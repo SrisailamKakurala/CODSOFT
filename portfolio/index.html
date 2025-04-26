@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans px-20">
+
+    <header class="bg-gray-800 py-6 shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-extrabold tracking-tight">Sri</h1>
+            <p class="text-green-400 mt-2 text-lg">Full Stack Developer | Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <section id="about" class="container mx-auto py-16 px-6">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <img src="image.png" alt="John Doe"
+                class="rounded-full w-48 h-48 object-cover shadow-2xl hover:scale-105 transition duration-300">
+            <div>
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    I'm Sri, a passionate full-stack developer skilled in React, Node.js, and cloud technologies. I
+                    love building scalable web applications and learning cutting-edge tech.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-gray-900 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
+
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <!-- Frontend -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-400">Frontend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="w-6 h-6" alt="HTML" />
+                            <span class="text-white group-hover:text-green-400">HTML5</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="w-6 h-6" alt="CSS" />
+                            <span class="text-white group-hover:text-green-400">CSS3</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="w-6 h-6" alt="JavaScript" />
+                            <span class="text-white group-hover:text-green-400">JavaScript</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                class="w-6 h-6" alt="React" />
+                            <span class="text-white group-hover:text-green-400">React.js</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-400">Backend</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                class="w-6 h-6" alt="Node.js" />
+                            <span class="text-white group-hover:text-green-400">Node.js</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                class="w-6 h-6 invert" alt="Express" />
+                            <span class="text-white group-hover:text-green-400">Express.js</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                class="w-6 h-6" alt="MongoDB" />
+                            <span class="text-white group-hover:text-green-400">MongoDB</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- DevOps / Others -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-400">DevOps & Tools</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                class="w-6 h-6" alt="Docker" />
+                            <span class="text-white group-hover:text-green-400">Docker</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                class="w-6 h-6 invert" alt="GitHub" />
+                            <span class="text-white group-hover:text-green-400">GitHub</span>
+                        </li>
+                        <li class="flex items-center gap-3 group hover:pl-2 transition-all duration-300">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+                                class="w-6 h-6" alt="AWS" />
+                            <span class="text-white group-hover:text-green-400">AWS</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-gray-950 py-20 px-6">
+        <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">Projects</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <!-- Project 1 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transform transition duration-300">
+            <img src="portfolio.png" alt="Portfolio Website" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">Personal Portfolio</h3>
+                <p class="text-gray-400 mb-4">A modern developer portfolio built with React, Tailwind, and Framer Motion to highlight projects and blogs.</p>
+                <div class="flex justify-between items-center text-sm text-green-400">
+                <a href="#" class="hover:underline">Live Demo →</a>
+                <a href="#" class="hover:underline">GitHub →</a>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transform transition duration-300">
+            <img src="task.png" alt="Task Manager App" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">Task Manager</h3>
+                <p class="text-gray-400 mb-4">Full-stack task management app using MERN stack. Includes auth, CRUD operations, and JWT security.</p>
+                <div class="flex justify-between items-center text-sm text-green-400">
+                <a href="#" class="hover:underline">Live Demo →</a>
+                <a href="#" class="hover:underline">GitHub →</a>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transform transition duration-300">
+            <img src="admin.png" alt="Admin Dashboard" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-2xl font-semibold text-white mb-2">Admin Dashboard</h3>
+                <p class="text-gray-400 mb-4">Dashboard app with Next.js, TailwindCSS, Recharts & dark/light mode. Supports user roles and stats.</p>
+                <div class="flex justify-between items-center text-sm text-green-400">
+                <a href="#" class="hover:underline">Live Demo →</a>
+                <a href="#" class="hover:underline">GitHub →</a>
+                </div>
+            </div>
+            </div>
+    
+        </div>
+        </div>
+    </section>
+
+    <section id="resume" class="bg-gray-800 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Resume</h2>
+            <a href="resume.pdf" download
+                class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full font-semibold transition duration-300 inline-block">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <div class="text-center space-y-4">
+            <p>Email: <a href="mailto:sri@gmail.com"
+                    class="text-green-400 hover:underline">sri@gmail.com</a></p>
+            <p>Phone: <span class="text-gray-300">+91 9705191160</span></p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-6 mt-16 text-center text-gray-400 text-sm">
+        &copy; 2025 Sri. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

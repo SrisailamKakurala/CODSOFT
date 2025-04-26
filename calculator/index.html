@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .calculator {
+      background: #1f2937;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 320px;
+    }
+
+    .display {
+      background: #111827;
+      color: #fff;
+      font-size: 2rem;
+      text-align: right;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+      min-height: 60px;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .buttons button {
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background: #374151;
+      color: #fff;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      background: #4ade80;
+      color: #111827;
+      transform: scale(1.05);
+    }
+
+    .operator {
+      background: #2563eb;
+    }
+
+    .operator:hover {
+      background: #60a5fa;
+    }
+
+    .equal {
+      background: #facc15;
+      grid-column: span 2;
+    }
+
+    .equal:hover {
+      background: #fde047;
+    }
+
+    .clear {
+      background: #ef4444;
+      grid-column: span 2;
+    }
+
+    .clear:hover {
+      background: #f87171;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <div id="display" class="display">0</div>
+    <div class="buttons">
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button class="operator" onclick="chooseOperator('*')">×</button>
+
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button class="operator" onclick="chooseOperator('-')">−</button>
+
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+      <button class="operator" onclick="chooseOperator('+')">+</button>
+
+      <button class="clear" onclick="clearDisplay()">C</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let currentInput = '';
+    let operator = '';
+    let firstOperand = '';
+
+    function appendNumber(number) {
+      if (display.innerText === '0' && number !== '.') {
+        currentInput = number;
+      } else {
+        currentInput += number;
+      }
+      updateDisplay();
+    }
+
+    function chooseOperator(op) {
+      if (currentInput === '') return;
+      if (firstOperand !== '') {
+        calculate();
+      }
+      operator = op;
+      firstOperand = currentInput;
+      currentInput = '';
+    }
+
+    function calculate() {
+      if (firstOperand === '' || currentInput === '') return;
+
+      let result;
+      const num1 = parseFloat(firstOperand);
+      const num2 = parseFloat(currentInput);
+
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num2 !== 0 ? num1 / num2 : 'Error';
+          break;
+        default:
+          return;
+      }
+
+      currentInput = result.toString();
+      operator = '';
+      firstOperand = '';
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      currentInput = '';
+      operator = '';
+      firstOperand = '';
+      display.innerText = '0';
+    }
+
+    function updateDisplay() {
+      display.innerText = currentInput || '0';
+    }
+  </script>
+
+</body>
+</html>
